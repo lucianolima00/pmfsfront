@@ -1,2 +1,9 @@
-/* CSS Document */
+@media (min-width: 1200px){
+	#navbar-logo{
+		height: 56px;
+	}
+}
 
+.nav{
+	float: right;
+}
