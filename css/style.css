@@ -1,16 +1,13 @@
 main{
 	margin: 5px 0 0 5px;
 }
-.nav{
-	float: right;
-}
-
 #navbar-account{
 	display: flex;
 	align-items: center;
 	float: right;
 }
 #aside-nav{
+ 	overflow: hidden;
 	display: flex;
 	background-color: #0F9200;
 	height: 100%;
@@ -39,7 +36,10 @@ main{
 		padding-top: 10px;
 	}
 	#navbar-logo{
+		width: 56px;
 		height: 56px;
+		border-radius: 5px;
+		margin-bottom: 5px;
 	}
 	#aside-nav{
 		width: 60px;
@@ -66,5 +66,9 @@ main{
 	}
 	#aside-nav span{
 		margin-left: 15px;
+	}
+	.acc-pict{
+		margin-left: 10px;
+		border-radius: 100px;
 	}
 }
