@@ -31,6 +31,21 @@ main{
 #aside-nav li:hover{
 	background-color: #0AFF00;
 }
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.stickyaside{
+	position: fixed;
+	top: 64px;
+	left: 0;
+	height: 100%;
+}
+.sticky + .content {
+	padding-top: 64px;
+	padding-left: 55px;
+}
 @media (min-width: 1200px){
 	main{
 		padding-top: 10px;

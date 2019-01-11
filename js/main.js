@@ -23,3 +23,23 @@ function asideHidde(){
 var elAside = document.getElementById('aside-nav');
 elAside.onmouseover = asideShow;
 elAside.onmouseout = asideHidde;
+
+window.onscroll = function() {stickNavMenu()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+var asidebar = document.getElementById("aside-nav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickNavMenu() {
+	if (window.pageYOffset >= sticky) {
+	  navbar.classList.add("sticky")
+	  asidebar.classList.add("stickyaside")
+	} else {
+	  navbar.classList.remove("sticky");
+	  asidebar.classList.add("stickyaside")
+	}
+}
