@@ -16,13 +16,55 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Raleway|Staatliches" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Index</title>
 </head>
-<body>
-	<div>
+<body id="body" class="light-mode">
+	<!-- Aside -->
+	<div class="float-left" id="aside-nav">
+		<ul class="nav flex-column h-100">
+			<li class="nav-item">
+				<a href="#" class="nav-link">
+					<i class="fas fa-home"></i><span class="aside-span">Home</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fas fa-tachometer-alt"></i><span class="aside-span">Dashboard</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fas fa-file-alt" style="padding-left: 3.5px; margin-right: 1px;"></i><span class="aside-span">Tests</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fas fa-users"></i><span class="aside-span">Users</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fas fa-chart-bar"></i><span class="aside-span">Charts</span>
+				</a>
+			</li>
+			<li class="nav-item fixed-bottom" style="bottom: 47px; padding-left: 1.5px; margin-right: 1px;">
+				<a class="nav-link" id="dark-light" onClick="toggleDarkLight()">
+					<i class="fas fa-moon"></i><span class="aside-span">DarkMode</span>
+				</a>
+			</li>
+			<li class="nav-item fixed-bottom">
+				<a class="nav-link" href="#">
+					<i class="fas fa-cog"></i><span class="aside-span">Options</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Aside Ends-->
+	<div class="container">
 		<!-- NavBar -->
-		<nav id="navbar" class="navbar sticky-top navbar-dark bg-dark d-flex bd-highlight">
+		<nav id="navbar" class="navbar">
 			<a class="navbar-brand" href="#">
 				<img id="navbar-logo" src="img/logo.png" width="52" height="45" alt="">
 			</a>
@@ -31,68 +73,25 @@
 			</a>
 		</nav>
 		<!-- NavBar Ends -->
-		<div class="container">
-			<!-- Aside -->
-			<div class="float-left" id="aside-nav">
-				<ul class="nav flex-column h-100">
-					<li class="nav-item">
-						<a href="#" class="nav-link">
-							<i class="fas fa-home"></i><span class="aside-span">Home</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="fas fa-tachometer-alt"></i><span class="aside-span">Dashboard</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="fas fa-file-alt" style="padding-left: 3.5px; margin-right: 1px;"></i><span class="aside-span">Tests</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="fas fa-users"></i><span class="aside-span">Users</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<i class="fas fa-chart-bar"></i><span class="aside-span">Charts</span>
-						</a>
-					</li>
-					<li class="nav-item fixed-bottom" style="bottom: 47px; padding-left: 1.5px; margin-right: 1px;">
-						<a class="nav-link" href="#">
-							<i class="fas fa-thumbtack"></i><span class="aside-span">Pin/Unpin</span>
-						</a>
-					</li>
-					<li class="nav-item fixed-bottom">
-						<a class="nav-link" href="#">
-							<i class="fas fa-cog"></i><span class="aside-span">Options</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- Aside Ends-->
-			<!-- Content -->
-			<div class="content">
-				<div class="row">
-					<div class="col-sm-8">
-						<p class="pg-title">Home</p>
-					</div>
-					<div class="col-sm-4">
-						<p class="location">you are here:</p>
-					</div>
+		<!-- Content -->
+		<div class="content">
+			<div class="row">
+				<div class="col-sm-8">
+					<p class="pg-title">Home</p>
+				</div>
+				<div class="col-sm-4">
+					<p class="location">you are here:</p>
 				</div>
 			</div>
-			<!-- Main Ends -->
-			<!-- Footer -->
-			<div class="footer">
-				<div class="row-footer"><p class="copy">Copyright Luciano Lima 2019</p></div>
-			</div>
-			<!-- Footer Ends -->
 		</div>
-		<!-- Container Ends -->
+		<!-- Main Ends -->
+		<!-- Footer -->
+		<div class="footer">
+			<div class="row-footer"><p class="copy">Copyright Luciano Lima 2019</p></div>
+		</div>
+		<!-- Footer Ends -->
 	</div>
+	<!-- Container Ends -->
 	<!-- JQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Bootstrap tooltips -->

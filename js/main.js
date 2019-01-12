@@ -1,36 +1,56 @@
 // Show aside text
 function asideShow(){
-	var elSpan = document.getElementsByClassName('aside-span');
-	var elNav = document.getElementsByClassName('nav-item');
-	var elAside = document.getElementById('aside-nav');
-	var elContent = document.getElementsByClassName('container');
-	var elFooter = document.getElementsByClassName('footer');
-	for (var i = 0; i < elSpan.length; i++){
-		elSpan[i].style.visibility = "visible";
-		elNav[i].style.width = "150px";
-		elAside.style.width = "160px";
+	var Span = document.getElementsByClassName('aside-span');
+	var Nav = document.getElementsByClassName('nav-item');
+	var Aside = document.getElementById('aside-nav');
+	var NavBar = document.getElementById('navbar-account');
+	var Content = document.getElementsByClassName('container');
+	var Footer = document.getElementsByClassName('footer');
+	for (var i = 0; i < Span.length; i++){
+		Span[i].style.visibility = "visible";
+		Nav[i].style.width = "150px";
+		Aside.style.width = "160px";
 	}
-	elContent[0].style.marginLeft = "160px";
-	elContent[0].style.paddingRight = "160px";
-	elFooter[0].style.paddingRight = "200px";
+	NavBar.style.paddingRight = "170px";
+	Content[0].style.marginLeft = "160px";
+	Content[0].style.paddingRight = "160px";
+	Footer[0].style.paddingRight = "200px";
 }
 //Hidde aside text
 function asideHidde(){
-	var elSpan = document.getElementsByClassName('aside-span');
-	var elNav = document.getElementsByClassName('nav-item');
-	var elAside = document.getElementById('aside-nav');
-	var elContent = document.getElementsByClassName('container');
-	var elFooter = document.getElementsByClassName('footer');
-	for (var i = 0; i < elSpan.length; i++){
-		elSpan[i].style.visibility = "hidden";
-		elNav[i].style.width = "47.5px";
-		elAside.style.width = "60px";
+	var Span = document.getElementsByClassName('aside-span');
+	var Nav = document.getElementsByClassName('nav-item');
+	var Aside = document.getElementById('aside-nav');
+	var NavBar = document.getElementById('navbar-account');
+	var Content = document.getElementsByClassName('container');
+	var Footer = document.getElementsByClassName('footer');
+	for (var i = 0; i < Span.length; i++){
+		Span[i].style.visibility = "hidden";
+		Nav[i].style.width = "47.5px";
+		Aside.style.width = "60px";
 	}
-	elContent[0].style.marginLeft = "60px";
-	elContent[0].style.paddingRight = "60px";
-	elFooter[0].style.paddingRight = "100px";
+	NavBar.style.paddingRight = "70px";
+	Content[0].style.marginLeft = "60px";
+	Content[0].style.paddingRight = "60px";
+	Footer[0].style.paddingRight = "100px";
 }
 
-var elAside = document.getElementById('aside-nav');
-elAside.onmouseover = asideShow;
-elAside.onmouseout = asideHidde;
+var Aside = document.getElementById('aside-nav');
+Aside.onmouseover = asideShow;
+Aside.onmouseout = asideHidde;
+
+
+
+function toggleDarkLight(){
+	var body = document.getElementById("body");
+	var currentClass = body.className;
+	var button = document.getElementById("dark-light");
+	if(currentClass == "dark-mode"){
+		body.className = "light-mode";
+		button.innerHTML = '<i class="fas fa-moon"></i><span class="aside-span">DarkMode</span>';
+	}
+	else{
+		body.className = "dark-mode";
+		button.innerHTML = '<i class="fas fa-sun"></i><span class="aside-span">LightMode</span>';
+	}
+}
