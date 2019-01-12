@@ -3,7 +3,7 @@ function asideShow(){
 	var Span = document.getElementsByClassName('aside-span');
 	var Nav = document.getElementsByClassName('nav-item');
 	var Aside = document.getElementById('aside-nav');
-	var NavBar = document.getElementById('navbar-account');
+	var NavBar = document.getElementsByClassName('wrapper');
 	var Content = document.getElementsByClassName('container');
 	var Footer = document.getElementsByClassName('footer');
 	for (var i = 0; i < Span.length; i++){
@@ -11,7 +11,7 @@ function asideShow(){
 		Nav[i].style.width = "150px";
 		Aside.style.width = "160px";
 	}
-	NavBar.style.paddingRight = "170px";
+	NavBar[0].style.paddingLeft = "100px";
 	Content[0].style.marginLeft = "160px";
 	Content[0].style.paddingRight = "160px";
 	Footer[0].style.paddingRight = "200px";
@@ -21,7 +21,7 @@ function asideHidde(){
 	var Span = document.getElementsByClassName('aside-span');
 	var Nav = document.getElementsByClassName('nav-item');
 	var Aside = document.getElementById('aside-nav');
-	var NavBar = document.getElementById('navbar-account');
+	var NavBar = document.getElementsByClassName('wrapper');
 	var Content = document.getElementsByClassName('container');
 	var Footer = document.getElementsByClassName('footer');
 	for (var i = 0; i < Span.length; i++){
@@ -29,7 +29,7 @@ function asideHidde(){
 		Nav[i].style.width = "47.5px";
 		Aside.style.width = "60px";
 	}
-	NavBar.style.paddingRight = "70px";
+	NavBar[0].style.paddingLeft = "0px";
 	Content[0].style.marginLeft = "60px";
 	Content[0].style.paddingRight = "60px";
 	Footer[0].style.paddingRight = "100px";

@@ -171,18 +171,31 @@ body.light-mode .row-footer{
 		padding-top: 10px;
 		margin-right: 10px;
 	}
+	.wrapper {
+		position: absolute;
+		left: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		grid-auto-rows: minmax(100px, auto);
+		transition: padding-left 0.5s;
+		/* Safari and Chrome*/
+		-webkit-transition: padding-left 0.5s;
+	}
 	#navbar-logo{
-		top: 2.5px;
+		margin: 0 auto;
+		width: fit-content;
+	}
+	#navbar-logo img{
 		width: 56px;
 		height: 56px;
 		border-radius: 5px;
-		margin-bottom: 5px;
+		margin: 2.5px auto;
 	}
 	.navbar-brand{
-		display: flex;
-		position: absolute;
 		height: 56px;
 		padding: unset;
+		margin: unset;
 	}
 	#navbar-account{
 		position: absolute;
@@ -190,13 +203,9 @@ body.light-mode .row-footer{
 		right: 10px;
 		border-radius: 100px;
 		margin: 10px;
-		padding: 5px 5px 5px 10px;
+		padding: 5px 10px 5px 10px;
 		height: 44px;
 		line-height: normal;
-		padding-right: 70px;
-		transition: margin-left 0.5s, padding-right 0.5s;
-		/* Safari and Chrome*/
-		-webkit-transition: margin-left 0.5s, padding-right 0.5s;
 	}
 	#navbar-account:hover{
 		background-color: #565656;
