@@ -1,16 +1,20 @@
-.container-fluid{
-	margin: 5px 0 0 5px;
+html, body, .container, .footer{
+	max-width: 100%;
+    overflow-x: hidden;
+	height: auto !important;
+}
+.container{
+	width: 100%;
+	margin: 5px 5px 0 60px;
 	padding-top: 64px;
-	padding-left: 60px;
-	transition: padding-left 0.5s;
+	padding-right: 60px;
+	transition: margin-left 0.5s, padding-right 0.5s;
 	/* Safari and Chrome*/
-	-webkit-transition: padding-left 0.5s;
-	transition-timing-function: ease;
+	-webkit-transition: margin-left 0.5s, padding-right 0.5s;
 }
 .row{
 	background-color: #DDDDDD;
 	color: #414141;
-	height: 100px;
 }
 .pg-title{
 	font-size: 26pt;
@@ -21,14 +25,21 @@
 	text-align: right;
 }
 .footer{
+	width: 100%;
+	position:absolute;
+	bottom: 0;
 	margin: 5px;
-	padding: 30px 0 30px 60px;
-	transition: padding-left 0.5s;
+	padding: 30px 100px 5px 5px;
+	transition: margin-left 0.5s,padding-right 0.5s;
+	/* Safari and Chrome*/
+	-webkit-transition: margin-left 0.5s, padding-right 0.5s;
 }
 .row-footer{
 	background-color: #ddd;
+	padding: 15px;
+	transition: margin-left 0.5s;
 	/* Safari and Chrome*/
-	-webkit-transition: padding-left 0.5s;
+	-webkit-transition: margin-left 0.5s;
 	transition-timing-function: ease;
 }
 .copy{
@@ -94,6 +105,7 @@
 @media (min-width: 1200px){
 	.content{
 		padding-top: 10px;
+		margin-right: 10px;
 	}
 	#navbar-logo{
 		top: 2.5px;
