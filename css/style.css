@@ -9,6 +9,7 @@
 }
 .row{
 	background-color: #DDDDDD;
+	color: #414141;
 	height: 100px;
 }
 .pg-title{
@@ -16,7 +17,23 @@
 	margin: 24.5px 0 24.5px 30px
 }
 .location{
-	margin: 39px 0 39px 0;
+	margin: 39px 40px 39px 0;
+	text-align: right;
+}
+.footer{
+	margin: 5px;
+	padding: 30px 0 30px 60px;
+	transition: padding-left 0.5s;
+}
+.row-footer{
+	background-color: #ddd;
+	/* Safari and Chrome*/
+	-webkit-transition: padding-left 0.5s;
+	transition-timing-function: ease;
+}
+.copy{
+	text-align: center;
+	margin: auto;
 }
 #navbar{
 	position: fixed;
@@ -75,12 +92,8 @@
 	background-color: #00E36E;
 }
 @media (min-width: 1200px){
-	main{
+	.content{
 		padding-top: 10px;
-	}
-	#navbar .p-2{
-		padding: 0 !important;
-		height: 64px;
 	}
 	#navbar-logo{
 		top: 2.5px;
@@ -96,8 +109,19 @@
 		padding: unset;
 	}
 	#navbar-account{
-		position: fixed;
+		position: absolute;
+		top: 0;
 		right: 10px;
+		border-radius: 100px;
+		margin: 10px;
+		padding: 5px 5px 5px 10px;
+		height: 44px;
+		line-height: normal;
+	}
+	#navbar-account:hover{
+		background-color: #565656;
+		text-decoration: none;
+		color: #fff
 	}
 	#aside-nav{
 	}
@@ -112,7 +136,7 @@
 		margin-left: 15px;
 	}
 	.acc-pict{
-		margin-left: 10px;
 		border-radius: 100px;
+		margin: auto 0 auto 10px;
 	}
 }
