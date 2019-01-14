@@ -1,5 +1,9 @@
+var Body = document.getElementById('body');
+Body.style.maxWidth = window.screen.width + "px";
+
 // Show aside text
 function asideShow(){
+	var Body = document.getElementById('body');
 	var Span = document.getElementsByClassName('aside-span');
 	var Nav = document.getElementsByClassName('nav-item');
 	var Aside = document.getElementById('aside-nav');
@@ -15,18 +19,15 @@ function asideShow(){
 	switch(true){
 		case (wid >= 1200):
 			NavBar[0].style.paddingLeft = "160px";
-			Content[0].style.marginLeft = "160px";
-			Content[0].style.paddingRight = "160px";
+			Content[0].style.paddingLeft = "160px";
 			break;
 		case (wid >= 768):
 			NavBar[0].style.paddingLeft = "160px";
-			Content[0].style.marginLeft = "160px";
-			Content[0].style.paddingRight = "160px";
+			Content[0].style.paddingLeft = "160px";
 			break;
 		default:
 			NavBar[0].style.paddingLeft = "60px";
-			Content[0].style.marginLeft = "60px";
-			Content[0].style.paddingRight = "60px";
+			Content[0].style.paddingLeft = "60px";
 			break;
 	}
 
@@ -48,18 +49,15 @@ function asideHidde(){
 	switch(true){
 		case (wid >= 1200):
 			NavBar[0].style.paddingLeft = "60px";
-			Content[0].style.marginLeft = "60px";
-			Content[0].style.paddingRight = "60px";
+			Content[0].style.paddingLeft = "60px";
 			break;
 		case (wid >= 768):
 			NavBar[0].style.paddingLeft = "60px";
-			Content[0].style.marginLeft = "60px";
-			Content[0].style.paddingRight = "60px";
+			Content[0].style.paddingLeft = "60px";
 			break;
 		default:
 			NavBar[0].style.paddingLeft = "60px";
-			Content[0].style.marginLeft = "60px";
-			Content[0].style.paddingRight = "60px";
+			Content[0].style.paddingLeft = "60px";
 			break;
 	}
 }
