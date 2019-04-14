@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ifg test site">
+    <meta name="author" content="Luciano Lima">
+    <meta name="keywords" content="ifg admin test">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.1/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Raleway|Staatliches" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Dashboard</title>
+</head>
+<body id="body">
+	<!-- NavBar -->
+	<nav id="navbar" class="wrapper">
+		<div>
+			<p class="pg-title">Dashboard</p>
+		</div>
+		<div>
+			<div id="navbar-logo">
+				<a  class="navbar-brand" href="#">
+					<img src="img/icons/logo.png" width="52" height="45" alt="">
+				</a>
+			</div>
+		</div>
+		<div>
+			<a id="navbar-account" href="#">
+				<span>Luciano</span>
+				<img class="acc-pict" src="img/icons/profilepictures/profilepicture.jpg" width="35" height="35" alt="">
+			</a>
+		</div>
+	</nav>
+	<!-- NavBar Ends -->
+	<!-- Aside -->
+	<div class="float-left" id="aside-nav" onmouseover="asideShow()" onmouseout="asideHide()">
+		<ul class="nav flex-column h-100">
+			<li class="nav-item">
+				<a class="nav-link" href="dashboard-admin.html">
+					<i class="fas fa-tachometer-alt"></i><span class="aside-span">Dashboard</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="test.html">
+					<i class="fas fa-file-alt" style="padding-left: 3.5px; margin-right: 1px;"></i><span class="aside-span">Tests</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="users.html">
+					<i class="fas fa-users"></i><span class="aside-span">Users</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">
+					<i class="fas fa-chart-bar"></i><span class="aside-span">Charts</span>
+				</a>
+			</li>
+			<li class="nav-item" id="cfg-btn" >
+				<a class="nav-link" href="#">
+					<i class="fas fa-cog"></i><span class="aside-span">Options</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Aside Ends-->
+	<div class="container">
+		<!-- Content -->
+		<div class="content">
+			<!-- Mini-Cards-->
+			<div class="row" id="miniCharts">
+				<div class="col-sm-3">
+						<div class="card card-mini">
+								<div class="card-mini-body">
+									<div class="row">
+										<div class="mini-left">
+											<div class="card-mini-icon card-orange">
+												<i class="fas fa-user-tie"></i>
+											</div>
+										</div>
+										<div class="mini-right">
+											<p class="card-mini-text">Teachers</p>
+											<h4 class="card-mini-title">20</h4>
+										</div>
+									</div>
+								</div>
+						</div>
+				</div>
+				<div class="col-sm-3">
+						<div class="card card-mini">
+								<div class="card-mini-body">
+									<div class="row">
+										<div class="mini-left">
+											<div class="card-mini-icon card-blue">
+													<i class="fas fa-user-graduate"></i>
+											</div>
+										</div>
+										<div class="mini-right">
+											<p class="card-mini-text">Students</p>
+											<h4 class="card-mini-title">1582</h4>
+										</div>
+									</div>
+								</div>
+						</div>
+				</div>
+				<div class="col-sm-3">
+						<div class="card card-mini">
+								<div class="card-mini-body">
+									<div class="row">
+										<div class="mini-left">
+											<div class="card-mini-icon card-purple">
+												<i class="fas fa-book"></i>
+											</div>
+										</div>
+										<div class="mini-right">
+											<p class="card-mini-text">Subjects</p>
+											<h4 class="card-mini-title">35</h4>
+										</div>
+									</div>
+								</div>
+						</div>
+				</div>
+				<div class="col-sm-3">
+						<div class="card card-mini">
+								<div class="card-mini-body">
+									<div class="row">
+										<div class="mini-left">
+											<div class="card-mini-icon card-green" style="padding: 5px 10.5px;">
+													<i class="fas fa-users"></i>												
+											</div>
+										</div>
+										<div class="mini-right">
+											<p class="card-mini-text">Classes</p>
+											<h4 class="card-mini-title">4</h4>
+										</div>
+									</div>
+								</div>
+						</div>
+				</div>
+			</div>
+			<!-- Mini-Cards Ends-->
+
+			<!-- Chart of Classes-->
+			<div class="card text-center" style="margin: 1rem 0">
+				<div class="card-body">
+					<h5 class="card-title">BCC Chart</h5>
+					<canvas id="mainChart" class="chartjs-render-monitor" style="display: block; width: 100%; height: 700px;"></canvas>
+				</div>
+			</div>
+			<!-- Chart of Classes Ends-->
+			<div class="row" style="margin: 1rem 0">
+				<!-- Students Table -->
+				<div class="col-sm-8" style="padding-left: 0">
+			  		<table class="table students-table">
+						<thead class="thead-dark">
+							<tr>
+							  <th scope="col">#</th>
+							  <th scope="col">First</th>
+							  <th scope="col">Last</th>
+							  <th scope="col">Handle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							  <th scope="row">1</th>
+							  <td>Mark</td>
+							  <td>Otto</td>
+							  <td>@mdo</td>
+							</tr>
+							<tr>
+							  <th scope="row">2</th>
+							  <td>Jacob</td>
+							  <td>Thornton</td>
+							  <td>@fat</td>
+							</tr>
+							<tr>
+							  <th scope="row">3</th>
+							  <td>Larry</td>
+							  <td>the Bird</td>
+							  <td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- Students Table Ends -->
+				<div class="col-sm-4" style="padding-right: 0">
+				  <div class="card text-center">
+					<div class="card-body">
+					  <h5 class="card-title">Students Chart</h5>
+					  <canvas id="studentChart" class="chartjs-render-monitor" style="display: block; height: 200px;"></canvas>
+					</div>
+				  </div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div class="footer">
+				<div class="row-footer"><p class="copy">Copyright © 2019 Luciano Lima</p></div>
+			</div>
+			<!-- Footer Ends -->
+		</div>
+		<!-- Contents Ends -->
+	</div>
+	<!-- Container Ends -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.1/js/mdb.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.js"
+	integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+	crossorigin="anonymous"></script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		document.getElementById("mainChart").addEventListener("onload", mainChart());
+		
+		document.getElementById("studentChart").addEventListener("onload", studentChart());
+	</script>
+</body>
+</html>
