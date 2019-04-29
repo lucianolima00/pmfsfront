@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<div>
-			<a id="navbar-account" href="#">
+			<a id="navbar-account" href="account.html">
 				<span>Luciano</span>
 				<img class="acc-pict" src="img/icons/profilepictures/profilepicture.jpg" width="35" height="35" alt="">
 			</a>
@@ -40,29 +40,29 @@
 	</nav>
 	<!-- NavBar Ends -->
 	<!-- Aside -->
-	<div class="float-left" id="aside-nav" onmouseover="asideShow()" onmouseout="asideHide()">
+	<div class="float-left" id="aside-nav">
 		<ul class="nav flex-column h-100">
-			<li class="nav-item">
+			<li class="aside-item">
+				<div class="nav-link">
+					<i class="fas fa-search"></i><input class="form-control form-control-sm aside-span" id="aside-input" placeholder="Search...">
+				</div>
+			</li>
+			<li class="aside-item">
 				<a class="nav-link" href="dashboard-admin.html">
 					<i class="fas fa-tachometer-alt"></i><span class="aside-span">Dashboard</span>
 				</a>
 			</li>
-			<li class="nav-item">
+			<li class="aside-item">
 				<a class="nav-link" href="test.html">
 					<i class="fas fa-file-alt" style="padding-left: 3.5px; margin-right: 1px;"></i><span class="aside-span">Tests</span>
 				</a>
 			</li>
-			<li class="nav-item">
+			<li class="aside-item">
 				<a class="nav-link" href="users.html">
 					<i class="fas fa-users"></i><span class="aside-span">Users</span>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">
-					<i class="fas fa-chart-bar"></i><span class="aside-span">Charts</span>
-				</a>
-			</li>
-			<li class="nav-item" id="cfg-btn" >
+			<li class="aside-item" id="cfg-btn" >
 				<a class="nav-link" href="#">
 					<i class="fas fa-cog"></i><span class="aside-span">Options</span>
 				</a>
@@ -73,6 +73,104 @@
 	<div class="container">
 		<!-- Content -->
 		<div class="content">
+			<!-- test creator modal scroll -->
+			<div class="modal fade" id="testcreator" tabindex="-1" role="create test" aria-labelledby="testcreatorLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="modal-title">
+								<h3 class="text-center title-2" style="margin-top: 10px; margin-bottom: 10px; margin-left: 5px;">Create Test</h3>
+	
+							</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="card">
+								<div class="card-body">
+									<form action="#" method="post" >
+										<div class="form-group">
+											<label for="subject" class="control-label mb-1">Subject</label>
+											<input id="subject" name="subject" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Enter a subject">
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<div class="form-group">
+													<label for="num_question" class="control-label mb-1">Number of Questions</label>
+													<input id="num-question" name="num-question" type="text" class="form-control cc-exp" placeholder="Enter the number of questions">
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+											<button  class="btn btn-success" type="submit">
+												Create
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end test creator modal scroll -->
+			
+			<!-- test creator modal scroll -->
+			<div class="modal fade" id="testedit" tabindex="-1" role="edit test" aria-labelledby="editLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="modal-title">
+								<h3 class="text-center title-2" style="margin-top: 10px; margin-bottom: 10px; margin-left: 5px;">Edit Test</h3>
+	
+							</div>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="card">
+								<div class="card-body">
+									<form action="" id="updateform" method="post" >
+										<div class="form-group">
+											<label for="subject" class="control-label mb-1">Subject</label>
+											<input id="subject" name="subject" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Enter a subject">
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<div class="form-group">
+													<label for="num_question" class="control-label mb-1">Number of Questions</label>
+													<input id="num-question" name="num-question" type="text" class="form-control cc-exp" placeholder="Enter the number of questions">
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+											<button  class="btn btn-success" type="submit">
+												Edit
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end test creator modal scroll -->
+	
+			<!-- New Tests Button
+			<div class="row">
+				<a href="test-create.html" class="btn btn-primary" style="margin-left: 20px"><i class="fas fa-plus" style="margin-right: 7.5px"></i>New Test</a>
+			</div>
+			-->
+			<button class="btn btn-primary" data-toggle="modal" id="create" data-target="#testcreator">
+				<i class="fas fa-plus" style="margin-right: 7.5px"></i>New Test
+			</button>
+			<!-- New Tests Button Ends-->
+
             <!-- Test Table -->
             <div style="height: 600px; overflow-y: hidden; border-radius: 10px;">
                 <table class="table test-table">
@@ -92,10 +190,22 @@
                         <td>Otto</td>
                         <td>@mdo</td>
                         <td>
-                            <span class="fas fa-check-circle"></span>
-                            <span class="fas fa-edit"></span>
-                            <span class="fas fa-pen"></span>
-                            <span class="fas fa-times-circle"></span>
+							<form >
+								<div class="table-data-feature">
+									<button class="btn-users user-acc" title="" data-original-title="Question" formaction="">
+										<i class="fas fa-check"></i>
+									</button>
+									<button class="btn-users user-acc" title="" data-original-title="Show" formaction="">
+										<i class="fas fa-pen"></i>
+									</button>
+									<button class="btn-users user-acc" data-toggle="modal" id="edit" data-target="#testedit" data-id="{{$data->id_test}}" formaction="#" title="" data-original-title="Edit">
+										<i class="fas fa-edit"></i>
+									</button>
+									<button class="btn-users user-acc" title="" data-original-title="Delete" formaction="">
+										<i class="fas fa-times"></i>
+									</button>
+								</div>
+							</form>
                         </td>
                         </tr>
                         <tr>
@@ -104,10 +214,20 @@
                         <td>Thornton</td>
                         <td>@fat</td>
                         <td>
-                            <span class="fas fa-check-circle"></span>
-                            <span class="fas fa-edit"></span>
-                            <span class="fas fa-pen"></span>
-                            <span class="fas fa-times-circle"></span>
+							<div class="row">
+								<div class="btn-users user-acc">
+									<i class="fas fa-check"></i>
+								</div>
+								<div class="btn-users user-mail">
+									<i class="fas fa-edit"></i>
+								</div>
+								<div class="btn-users user-mail">
+									<i class="fas fa-pen"></i>
+								</div>
+								<div class="btn-users user-mail">
+									<i class="fas fa-times"></i>
+								</div>
+							</div>
                         </td>
                         </tr>
                         <tr>
@@ -116,10 +236,20 @@
                         <td>the Bird</td>
                         <td>@twitter</td>
                         <td>
-                            <span class="fas fa-check-circle"></span>
-                            <span class="fas fa-edit"></span>
-                            <span class="fas fa-pen"></span>
-                            <span class="fas fa-times-circle"></span>
+							<div class="row">
+								<div class="btn-users user-acc">
+									<i class="fas fa-check"></i>
+								</div>
+								<div class="btn-users user-mail">
+									<i class="fas fa-edit"></i>
+								</div>
+								<div class="btn-users user-mail">
+									<i class="fas fa-pen"></i>
+								</div>
+								<div class="btn-users user-mail">
+									<i class="fas fa-times"></i>
+								</div>
+							</div>
                         </td>
                         </tr>
                     </tbody>

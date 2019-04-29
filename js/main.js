@@ -3,15 +3,13 @@ Body.style.maxWidth = window.screen.width + "px";
 
 // Show aside text
 function asideShow(){
-	var Body = document.getElementById('body');
 	var Span = document.getElementsByClassName('aside-span');
-	var Nav = document.getElementsByClassName('nav-item');
+	var Nav = document.getElementsByClassName('aside-item');
 	var Aside = document.getElementById('aside-nav');
 	var NavBar = document.getElementsByClassName('wrapper');
 	var Content = document.getElementsByClassName('container');
-	var Footer = document.getElementsByClassName('footer');
-	for (var i = 0; i < Span.length; i++){
-		Span[i].style.visibility = "visible";
+	for (let i = 0; i < Nav.length; i++){
+		Span[i].style.display = "unset";
 		Nav[i].style.width = "150px";
 		Aside.style.width = "160px";
 	}
@@ -35,13 +33,12 @@ function asideShow(){
 //Hidde aside text
 function asideHide(){
 	var Span = document.getElementsByClassName('aside-span');
-	var Nav = document.getElementsByClassName('nav-item');
+	var Nav = document.getElementsByClassName('aside-item');
 	var Aside = document.getElementById('aside-nav');
 	var NavBar = document.getElementsByClassName('wrapper');
 	var Content = document.getElementsByClassName('container');
-	var Footer = document.getElementsByClassName('footer');
-	for (var i = 0; i < Span.length; i++){
-		Span[i].style.visibility = "hidden";
+	for (let i = 0; i < Nav.length; i++){
+		Span[i].style.display = "none";
 		Nav[i].style.width = "47.5px";
 		Aside.style.width = "60px";
 	}
@@ -62,6 +59,8 @@ function asideHide(){
 	}
 }
 
+document.getElementById("aside-nav").addEventListener("mouseover", function(){asideShow()});
+document.getElementById("aside-nav").addEventListener("mouseout", function(){asideHide()});
 
 window.chartColors = {
 	red: 'rgb(255, 99, 132)',
@@ -219,36 +218,43 @@ function mainChart() {
 			labels: ['2016', '2017', '2018', '2019'],
 			datasets: [{
 				label: '1º Periodo',
-				backgroundColor: 'rgba(54, 162, 235, 0.5)',
+				fill: false,
+				backgroundColor: 'rgba(54, 162, 235, 1)',
 				borderColor:  'rgba(54, 162, 235, 1)',
 				data: [
 					87,
 					64,
 					73,
-					12,
-					23,
-					99,
-					45
+					12
 				],
-				fill: true,
 			}, {
-				label: '3º Periodo',
-				fill: true,
-				backgroundColor: 'rgba(255, 99, 132, 0.5)',
+				label: '2º Periodo',
+				fill: false,
+				backgroundColor: 'rgba(255, 99, 132, 1)',
 				borderColor: 'rgba(255, 99, 132, 1)',
 				data: [
-					103,
+					78,
 					28,
 					54,
-					32,
-					35,
-					45,
-					29
+					0
+				],
+			}, {
+				label: '3º Periodo',
+				fill: false,
+				backgroundColor: '#00d377',
+				borderColor: '#00d377',
+				data: [
+					0,
+					94,
+					21,
+					98
 				],
 			}]
 		},
 		options: {
-			responsive: true,
+			legend: {
+				display: false,
+			},
 			tooltips: {
 				mode: 'index',
 				intersect: false,
@@ -261,18 +267,19 @@ function mainChart() {
 				xAxes: [{
 					display: true,
 					scaleLabel: {
-						display: true,
-						labelString: 'Month'
+						display: false,
+						labelString: 'Year'
 					}
 				}],
 				yAxes: [{
-					display: true,
+					display: false,
 					scaleLabel: {
-						display: true,
+						display: false,
 						labelString: 'Average'
 					}
 				}]
-			}
+			},
+			responsive: true
 		}
 	};
 	
@@ -283,68 +290,42 @@ function mainChart() {
 
 function studentChart(){
 	var configStudent = {
-		type: 'bar',
+		type: 'radar',
 		data: {
-			labels: ['2016', '2017', '2018', '2019'],
+			labels: ['APS', 'POO', 'ISD', 'CAL', 'BDI', 'EDI'],
 			datasets: [{
-				label: '1º Periodo',
-				backgroundColor: window.chartColors.red,
-				borderColor: window.chartColors.red,
-				data: [
-					87,
-					64,
-					73,
-					12,
-					23,
-					99,
-					45
-				],
-				fill: false,
-			}, {
-				label: '3º Periodo',
+				label: 'Luciano Lima',
 				fill: false,
 				backgroundColor: window.chartColors.blue,
 				borderColor: window.chartColors.blue,
+				borderWidth: 2,
+				pointBackgroundColor: window.chartColors.blue,
+				pointBorderColor: window.chartColors.blue,
+				pointRadius: 2,
+				pointHoverRadius: 4,
 				data: [
-					103,
+					89,
 					28,
 					54,
 					32,
-					35,
-					45,
-					29
+					85,
+					45
 				],
 			}]
 		},
 		options: {
-			responsive: true,
+			legend: {
+				display: false,
+			},
 			tooltips: {
 				mode: 'index',
 				intersect: false,
-			},
-			gridLines: {
-				display: false
 			},
 			hover: {
 				mode: 'nearest',
 				intersect: true
 			},
-			scales: {
-				xAxes: [{
-					display: false,
-					scaleLabel: {
-						display: true,
-						labelString: 'Month'
-					}
-				}],
-				yAxes: [{
-					display: false,
-					scaleLabel: {
-						display: true,
-						labelString: 'Average'
-					}
-				}]
-			}
+			responsive: true
 		}
 	};
 		
@@ -557,3 +538,5 @@ document.getElementById('removeData').addEventListener('click', function() {
 
 	window.myLine.update();
 });*/
+
+

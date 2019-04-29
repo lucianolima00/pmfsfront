@@ -16,13 +16,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Raleway|Staatliches" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Users</title>
+	<title>BCC Test</title>
 </head>
 <body id="body">
 	<!-- NavBar -->
 	<nav id="navbar" class="wrapper">
 		<div>
-			<p class="pg-title">Users</p>
+			<p class="pg-title">BCC Test</p>
 		</div>
 		<div>
 			<div id="navbar-logo">
@@ -73,82 +73,69 @@
 	<div class="container">
 		<!-- Content -->
 		<div class="content">
-            <!-- Test Table -->
-            <div style="height: 600px; overflow: hidden; border-radius: 10px;">
-                <table class="table users-table table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Class</th>
-                        <th scope="col">Online Last Time</th>
-                        <th scope="col">Options</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <div style=" overflow-y: scroll;">
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td style="padding-top: 15px !important">
-								<div class="row">
-									<div class="btn-users user-acc">
-										<i class="fas fa-user"></i>
-									</div>
-									<div class="btn-users user-mail">
-										<i class="fas fa-envelope"></i>
+            <!-- Questions -->
+            <div id="test">
+				<div class="question">
+					<div class="card">
+						<div class="card-header">Question </div>
+						<div class="card-body" id="enunciate">
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="write-tab" data-toggle="tab" href="#write" role="tab" aria-controls="text" aria-selected="true">Write</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload" aria-selected="false">Upload</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="enunciateType" style="margin-top: 10px">
+								<div class="tab-pane fade show active" id="write" role="tabpanel" aria-labelledby="write-tab">
+									<textarea class="form-control" rows="10" placeholder="Write the enunciate" aria-label="writetextarea" aria-describedby="writetextarea"></textarea>
+								</div>
+								<div class="tab-pane fade" id="upload" role="tabpanel" aria-labelledby="upload-tab">                                        
+									<div class="form-group">
+										<img class="imgUpload" src="#" alt="" style="display: none; width: 100%;"/>
+										<input type="file" class="uploadInput">
 									</div>
 								</div>
-                            </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td style="padding-top: 15px !important">
-								<div class="row">
-									<div class="btn-users user-acc">
-										<i class="fas fa-user"></i>
-									</div>
-									<div class="btn-users user-mail">
-										<i class="fas fa-envelope"></i>
-									</div>
-								</div>
-                            </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td style="padding-top: 15px !important">
-								<div class="row">
-									<div class="btn-users user-acc">
-										<i class="fas fa-user"></i>
-									</div>
-									<div class="btn-users user-mail">
-										<i class="fas fa-envelope"></i>
-									</div>
-								</div>
-                            </td>
-                            </tr>
-                        </div>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Test Table Ends -->
+							</div>
+						</div>
+		
+						<div class="card-body">
+							<div class="input-group-prepend">
+								<div class="input-group-text">A</div>
+								<input type="text" class="form-control" placeholder="Write A answer">
+							</div>
+							<div class="input-group-prepend">
+								<div class="input-group-text">B</div>
+								<input type="text" class="form-control" placeholder="Write B answer">
+							</div>
+							<div class="input-group-prepend">
+								<div class="input-group-text">C</div>
+								<input type="text" class="form-control" placeholder="Write C answer">
+							</div>
+							<div class="input-group-prepend">
+								<div class="input-group-text">D</div>
+								<input type="text" class="form-control" placeholder="Write D answer">
+							</div>
+							<div class="input-group-prepend">
+								<div class="input-group-text">E</div>
+								<input type="text" class="form-control" placeholder="Write E answer">
+							</div>
+						</div>
+					</div>  
+				</div>
+			</div>
+			
+			<button type="button" id="submit" class="btn btn-success btn-lg btn-block" style="margin-top:20px"><i class="fas fa-check"></i> Submit Test</button>
+            <!-- Questions Ends -->
             <!-- Footer -->
             <div class="footer">
                 <div class="row-footer"><p class="copy">Copyright © 2019 Luciano Lima</p></div>
             </div>
-		    <!-- Footer Ends -->
+            <!-- Footer Ends -->
         </div>
         <!-- Contents Ends -->
     </div>
-</div>
 <!-- Container Ends -->
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -165,7 +152,50 @@
 src="https://code.jquery.com/jquery-3.3.1.slim.js"
 integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
 crossorigin="anonymous"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+	var test = document.getElementById("test");
+	var question = document.getElementsByClassName("question");
+	var numQuestion = document.getElementsByClassName("card-header");
+	function numQ(){
+		for(var i = 0; i < numQuestion.length; i++){
+			numQuestion[i].textContent = "Question " + (i + 1);
+		}
+	}
+	function readURL() {
+		evt = event.target;
+		var files = evt.files; // FileList object
+
+		// use the 1st file from the list
+		f = files[0];
+
+		var reader = new FileReader();
+
+		reader.onload = function(e) {
+			$(evt).parent().children('.imgUpload').attr('src', e.target.result);
+			$(evt).parent().children('.imgUpload').show();
+		}
+
+		reader.readAsDataURL(evt.files[0]);
+		/*
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function(e) {
+				$($(input).parent().children('.imgUpload')).attr('src', e.target.result);
+				$($(input).parent().children('.imgUpload')).show();
+			}
+
+			reader.readAsDataURL(input.files[0]);
+		}*/
+	}
+
+	var upload = document.getElementsByClassName("uploadInput");
+
+	for(var i = 0; i < upload.length; i++){
+		console.log(upload[i]);
+		upload[i].addEventListener('change', function(){readURL()});
+	}
+</script>
 </body>
 </html>

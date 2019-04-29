@@ -1,25 +1,31 @@
 body{
 	height: 100vh;
 }
+
 html, body, .container, .footer{
 	font-family: 'Montserrat', sans-serif;
 	max-width: 100%;
 }
+
 body {
 	background-color: #FEFEFE;
 	color: #111;
 	overflow-x: hidden;
 }
+
 body #navbar{
 	background-color: #ECECEC;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
+
 body #navbar-account{
 	color: #111;
 }
+
 body #navbar-account:hover{
 	color: #eee;
 }
+
 body #aside-nav{
 	background: #00d377; /* Old browsers */
 	background: -moz-linear-gradient(top, #00d377 0%, #15634c 100%); /* FF3.6-15 */
@@ -27,11 +33,13 @@ body #aside-nav{
 	background: linear-gradient(to bottom, #00d377 0%,#15634c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d377', endColorstr='#15634c',GradientType=0 ); /* IE6-9 */
 }
+
 body .breadcrumb{
 	color: #111 !important;
 	background-color: #D0D0D0;
 	font-family: 'Raleway', sans-serif;
 }
+
 body .row-footer{
 	color: #111;
 	background-color: #D0D0D0;
@@ -43,6 +51,7 @@ body .row-footer{
 	transition-timing-function: ease;
 	border-radius: .25rem;
 }
+
 .container{
 	width: 100%;
 	margin: 5px 5px 0 0;
@@ -51,10 +60,12 @@ body .row-footer{
 	/* Safari and Chrome*/
 	-webkit-transition: padding-left 0.5s, padding-right 0.5s;
 }
+
 .content{
 	padding: 0 10px 0 10px;
 	z-index: 1;
 }
+
 .footer{
 	bottom: 0;
 	transition: padding-left 0.5s,padding-right 0.5s;
@@ -62,16 +73,20 @@ body .row-footer{
 	-webkit-transition: padding-left 0.5s, padding-right 0.5s;
 	margin-top: 20px;
 }
+
 .copy{
 	text-align: center;
 	margin: auto;
 }
+
 #navbar{
 	z-index: 1;
 }
+
 #navbar-logo{
 	border-radius: 5px;
 }
+
 #aside-nav{
 	position: absolute;
 	width: 60px;
@@ -85,18 +100,32 @@ body .row-footer{
     overflow-x: hidden;
 	overflow-y: hidden;
 }
-#aside-nav span{
-	visibility: hidden;
+
+#aside-nav span, #aside-nav input{
+	display: none;
 	position: absolute;
 }
-#aside-nav a{
+
+#aside-nav a, #aside-nav div{
 	text-decoration: none;
 	color: #fff;
+	font-size: 16px;
 }
+
 #aside-nav a:hover{
 	text-decoration: none;
 	color: #414141;
 }
+
+
+#aside-nav div:hover{
+	color: #414141;
+}
+
+#aside-nav div:hover > #aside-input::placeholder{
+	color: #414141;
+}
+
 #aside-nav li{
 	width: 47.5px;
 	transition: width 0.5s;
@@ -110,12 +139,29 @@ body .row-footer{
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 	margin: 5px;
 }
+
 #aside-nav li:hover{
 	background-color: #00E36E;
 }
+
 #aside-nav .nav-link{
 	padding: .5rem 0.9rem
 }
+
+#aside-input{
+	border: 0;
+	width: 100px;
+	height: 24.5px;
+	background: rgba(0, 0, 0, 0);
+	margin: auto 6px !important;
+	float: right;
+}
+
+#aside-input::placeholder{
+	color: #fff;
+	font-size: 16px;
+}
+
 #cfg-btn{
 	position: absolute;
 	bottom: 0;
@@ -156,6 +202,10 @@ body .row-footer{
 	border-radius: 1rem;
 	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 	height: 100px;
+}
+
+.card-mini:hover{
+	box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
 }
 
 .card-mini-body{
@@ -319,7 +369,7 @@ body .row-footer{
 	#aside-nav li:hover{
 		width: 150px;
 	}
-	#aside-nav span{
+	#aside-nav span, #aside-nav input{
 		margin-left: 15px;
 	}
 	.acc-pict{
@@ -331,7 +381,7 @@ body .row-footer{
 	}
 	.pg-title{
 		font-size: 16pt;
-		margin: 5px auto;
+		margin: 17px 5px;
 		text-align: center;
 	}
 	.location{
@@ -356,6 +406,7 @@ body .row-footer{
 		margin-bottom: 2rem;
 		font-weight: 300;
 		font-size: 1.5rem;
+		text-align: start !important;
 	}
 	
 	.card-signin .card-body {
@@ -421,7 +472,11 @@ body .row-footer{
 
 	.content{
 		margin-top: 10px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+	}
+
+	.card-mini{
+		margin: 5px 0;
 	}
 }
 
@@ -492,7 +547,7 @@ body .row-footer{
 	#aside-nav li:hover{
 		width: 150px;
 	}
-	#aside-nav span{
+	#aside-nav span, #aside-nav input{
 		margin-left: 15px;
 	}
 	.acc-pict{
@@ -524,7 +579,7 @@ body .row-footer{
 	}
 	
 	.card-signin .card-title {
-		margin-bottom: 2rem;
+		margin: 12px;
 		font-weight: 300;
 		font-size: 1.5rem;
 	}
@@ -656,7 +711,7 @@ body .row-footer{
 	#aside-nav li:hover{
 		width: 150px;
 	}
-	#aside-nav span{
+	#aside-nav span, #aside-nav input{
 		margin-left: 15px;
 	}
 	.acc-pict{
@@ -676,6 +731,15 @@ body .row-footer{
 	.location{
 		margin: 39px 40px 39px 0;
 		text-align: right;
+	}
+
+	.account-big{
+		border-radius: 100px;
+	}
+	
+	.user-info{
+		margin: 10px 0;
+		color: #888;
 	}
 
 	.card-signin {
